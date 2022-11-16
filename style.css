@@ -8,6 +8,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    scroll-behavior: smooth;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,7 +27,7 @@ body {
     justify-content: center;
     overflow-wrap: normal;
     align-items: center;
-    transition: opacity 0.2s;
+    transition: opacity 0.5s;
 }
 
 #greetings-box.invisible {
@@ -53,8 +54,28 @@ body {
     color: green;
 }
 
-#welcome-text {
-    animation: pop 0.5s ease-out;
+#header-box {
+    padding: 30px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    width: 100vw;
+}
+
+header {
+    padding: 0px 50px;
+    background: rgba( 144, 19, 254, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    border-radius: 15px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+#header-box h1{
+    color: white;
+    font-size: 3em;
 }
 
 @keyframes pop {
@@ -67,4 +88,20 @@ body {
         opacity: 1;
         transform: translateY(0px);
     }
+}
+
+#objectives {
+    order: 2;
+    color: aliceblue;
+    text-align: center;
+    margin-top: 500px;
+    width: 50vw;
+    height: auto;
+    padding: 15px;
+    background: rgba( 255, 255, 255, 0.1 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.2 );
 }

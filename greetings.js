@@ -79,7 +79,9 @@ function loaderWriter() {
         setTimeout(loaderWriter, randomTimeFast());
     }
     else {
-        terminal.classList.add("invisible");
+        setTimeout( () => {
+            document.getElementById("greetings-box").classList.add("invisible");
+        }, 300);
     }
 }
 

@@ -9,13 +9,10 @@ int main(int argc, char **argv){
 	}
 	char *line = malloc(200 * sizeof(char));
 	while ((fscanf(ar, "%[^\n]%*c", line)) != EOF){
-		fputc(op, '"');
+		fputc('"', op);
 		fprintf(op, "%s", line);
-		fputc(op, '"');
-		fputc(op, ',');
+		fprintf(op, "\",");
 	}
 	free(line);
 	return 0;
 }
-
-
