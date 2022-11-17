@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -23,8 +23,6 @@
     </div>
 
     <div id="container">
-
-        <img src="background.svg" id="background">
 
         <div class="spacer float"></div>
 
@@ -91,20 +89,8 @@
 
     </div>
 
-    <script defer src="greetings.js"></script>
-    <script defer src="./vanilla-tilt.js"></script> 
-    <script>
-        let banner = document.getElementById("council-banner");
-        let background = document.getElementById("background");
-
-        window.addEventListener("scroll", () => {
-            
-            let scroll_value = window.scrollY;
-            banner.style.left= 2000 + scroll_value * -3.5 + "px";
-            background.style.top = scroll_value * 0.43 + "px";
-
-        });
-    </script>
+    <script defer src="scripts/greetings.js"></script>
+    <script defer src="scripts/vanilla-tilt.js"></script> 
 </body>
 </html>
 
@@ -121,34 +107,18 @@
             <h1 id="text-0">$ </h1>
         </div>
     </div>
-    
-    <script>
-        
-        let header_box = document.getElementById("hout")
-        let header_content = document.getElementById("hin")
-        let set = 0 
 
+        <script>
+        let banner = document.getElementById("council-banner");
+        let background = document.getElementById("background");
 
         window.addEventListener("scroll", () => {
             
-            if (pageYOffset < 300 && set == 0) {
+            let scroll_value = window.scrollY;
+            banner.style.left= 2000 + scroll_value * -3.5 + "px";
+            background.style.top = scroll_value * 0.43 + "px";
 
-                header_content.style.fontSize = (10/pageYOffset) + 3.5 + 'em'
-
-            }
-
-            if (pageYOffset > 300) {
-
-                header_box.classList.remove("header-none")
-                header_box.classList.add("header-box")
-
-                header_content.classList.remove("header-initial")
-                header_content.classList.add("header-final")
-                
-            }
-
-        })
-
+        });
     </script>
     
 -->

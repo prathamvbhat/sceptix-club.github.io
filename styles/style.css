@@ -2,6 +2,30 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Gandhi Sans';
+    src: url('/fonts/GandhiSans-Regular.otf');
+}
+
+@font-face {
+    font-family: 'Gandhi Sans';
+    src: url('/fonts/GandhiSans-Bold.otf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Gandhi Sans';
+    src: url('/fonts/GandhiSans-Italic.otf');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gandhi Sans';
+    src: url('/fonts/GandhiSans-BoldItalic.otf');
+    font-style: italic;
+    font-weight: bold;
+}
+
 body {
     font-family: 'Ubuntu Mono', monospace;
     min-height: 100vh;  
@@ -58,12 +82,18 @@ body {
 }
 
 #container {
+    font-family: "Gandhi Sans", sans-serif;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     overflow-x: hidden;
+    background-image: url("/images/background.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 #container p {
@@ -173,11 +203,9 @@ header {
 }
 
 #council-banner {
-    position: absolute;
-    top: 680px;
-    left: 2000;
     color: white;
-    font-size: 5em;
+    font-size: 4em;
+    line-height: 30px;
     white-space: nowrap;
     text-align: center;
 }
