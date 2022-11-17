@@ -1,6 +1,0 @@
-{
-    "[javascript]": {
-        "diffEditor.wordWrap": "off",
-        "diffEditor.renderSideBySide": false
-    }
-}

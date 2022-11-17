@@ -80,6 +80,8 @@ function loaderWriter() {
     }
     else {
         setTimeout( () => {
+            
+
             document.getElementById("greetings-box").classList.add("invisible");
         }, 300);
     }

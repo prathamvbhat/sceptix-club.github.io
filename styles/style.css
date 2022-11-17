@@ -48,6 +48,7 @@ body {
 
 #greetings-box.invisible {
     opacity: 0;
+    display: none;
 }
 
 #greetings-text-box {
@@ -89,6 +90,7 @@ body {
     align-items: center;
     justify-content: center;
     overflow-x: hidden;
+    scroll-behavior: smooth;
     background-image: url("/images/background.svg");
     background-position: center;
     background-size: cover;
@@ -114,7 +116,7 @@ body {
 }
 
 .float {
-    z-index: 2;
+    z-index: 5;
 }
 
 .blur {
@@ -149,7 +151,7 @@ header {
     border-radius: 20px;
     margin-right: 20px;
     text-decoration: none;
-    color: rgb(161,106,232);
+    color: #FD49A0;
     background: white;
     border-radius: 30px;
     transition: 0.2s;
@@ -157,7 +159,7 @@ header {
 
 #header-box a:hover {
     color: white;
-    background: rgb(161,106,232);
+    background: #FD49A0;
 }
 
 #header-box h1{
