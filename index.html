@@ -23,9 +23,13 @@
     </div>
 
     <div id="container">
+
         <img src="background.svg" id="background">
+
         <div class="spacer float"></div>
-        <h1 id="heading" class="float">A college-level club in St Joseph Engineering College, Mangalore</h1>
+
+        <h1 class="heading float">A college-level club in St Joseph Engineering College, Mangalore</h1>
+
         <div id="objectives" class="float">
             <h1>What we do</h1>
             <ul>
@@ -38,9 +42,69 @@
             <p>Subscription services, paywalls, and licenses. Everyday the world is heading towards a place where one is lead to believe that good things come from paid software. We like to believe otherwise. Great things have been made with OSS, in fact most of the web itself runs on Linux, a FOSS kernel. Liberating oneself from the very notion of paid software superiority is encapsulated in our motto, Liberate The Mind. In the words of Linus Torvalds, Software is like sex; It's good only when it's free.</p>
         </div>
 
+        <div class="spacer float"></div>
+
+        <h1 id="council-banner" class="float">The Council</h1>
+
+        <div id="council" class="float" >
+            <div class="card" data-tilt>
+                <img src="/images/DRD.png" alt="Dr Rio Dsouza">
+                <h2>Dr Rio Dsouza</h2>
+                <p>Principal, SJEC</p>
+            </div>
+            <div class="card"data-tilt >
+                <img src="/images/DSA.png" alt="Dr Shreenath Acharya">
+                <h2>Dr Shreenath Acharya</h2>
+                <p>Faculty Coordinator</p>
+            </div>
+            <div class="card" data-tilt>
+                <img src="/images/VMN.png" alt="Vyasa M Nayak">
+                <h2>Vyasa M Nayak</h2>
+                <p>President</p>
+            </div>
+            <div class="card" data-tilt>
+                <img src="/images/OB.png" alt="Omkar Bhat">
+                <h2>Omkar Bhat</h2>
+                <p>Vice President</p>
+            </div>
+            <div class="card" data-tilt>
+                <img src="/images/SSP.png" alt="Samwin Steve Pereira">
+                <h2>Samwin Steve Pereira</h2>
+                <p>Technical Supervisor</p>
+            </div>
+            <div class="card" data-tilt>
+                <img src="/images/ATD.png" alt="Alriya Treeza Dsouza">
+                <h2>Alriya Treeza Dsouza</h2>
+                <p>Secretary</p>
+            </div>
+            <div class="card" data-tilt>
+                <img src="/images/KRH.png" alt="Khushi Rhudaynath Haldankar">
+                <h2>Khushi Rhudaynath Haldankar</h2>
+                <p>Media Supervisor</p>
+            </div>
+            <div class="card" data-tilt>
+                <img src="/images/AGV.png" alt="Arshith Glanwin Vaz">
+                <h2>Arshith Glanwin Vaz</h2>
+                <p>Advisory Supervisor</p>
+            </div>
+        </div>
+
     </div>
 
-    <script src="greetings.js"></script>
+    <script defer src="greetings.js"></script>
+    <script defer src="./vanilla-tilt.js"></script> 
+    <script>
+        let banner = document.getElementById("council-banner");
+        let background = document.getElementById("background");
+
+        window.addEventListener("scroll", () => {
+            
+            let scroll_value = window.scrollY;
+            banner.style.left= 2000 + scroll_value * -3.5 + "px";
+            background.style.top = scroll_value * 0.43 + "px";
+
+        });
+    </script>
 </body>
 </html>
 
