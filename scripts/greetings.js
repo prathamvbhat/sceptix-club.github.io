@@ -55,7 +55,6 @@ function loader () {
     let terminalWidth = terminal.clientWidth;
     let totalCharacters = Math.round(terminalWidth / singleCharacterWidth(terminal) * 0.5);
     window.barLength = totalCharacters - 12;
-    console.log(terminalWidth, totalCharacters, window.barLength);
     let text = document.createTextNode("Progress: []");
     tag.appendChild(text);
     terminal.appendChild(tag);
@@ -80,11 +79,19 @@ function loaderWriter() {
     }
     else {
         setTimeout( () => {
-            
-
-            document.getElementById("greetings-box").classList.add("invisible");
+            document.getElementById("container").classList.remove("hidden");
+            removeFadeOut(document.getElementById("greetings-box"), 500);
         }, 300);
     }
+}
+
+function removeFadeOut(el, speed) {
+    let seconds = speed/1000;
+    el.style.transition = "opacity "+seconds+"s ease";
+    el.style.opacity = 0;
+    setTimeout(() => {
+        el.parentNode.removeChild(el);
+    }, speed);
 }
 
 writer()
