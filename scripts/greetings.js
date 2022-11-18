@@ -27,12 +27,9 @@ function writer() {
 }
 
 async function splasher() {
-    for (i = 1; i < 200; i++){
-        let tag = document.createElement("h1");
-        tag.id = `text-${i}`;
-        let text = document.createTextNode(splash[i - 1]);
-        tag.appendChild(text);
-        terminal.appendChild(tag);
+    let tag = document.getElementById("text-0");
+    for (i = 0; i < 199; i++){
+        tag.innerHTML += "<br>" + splash[i];
         await sleep(randomTime());
         terminal.scrollTop = tag.offsetHeight + tag.offsetTop; 
     }

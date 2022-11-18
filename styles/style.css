@@ -57,16 +57,18 @@ body {
     height: 70vh;
     width: 80vw;
     z-index: 11;
-    line-height: 12px;
     overflow: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    font-size: smaller;
-    color: white;
 }
 
 #greetings-text-box::-webkit-scrollbar {
     display: none;
+}
+
+#greetings-text-box p{
+    color: white;
+    font-size: 1.85em;
 }
 
 #progress-bar {
@@ -228,7 +230,7 @@ header {
 }
 
 footer {
-    width: 80%;
+    width: 80vw;
     text-align: center;
     font-family: "Ubuntu Mono", monospace;
     margin-top: 30px;
@@ -237,10 +239,76 @@ footer {
 
 footer a {
     color: #fff;
+    margin-top: -5px;
     font-size: 0.75em;
     text-decoration: none;
 }
 
 footer a:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 1200px) {
+    #greetings-text-box {
+        height: 80vh;
+        width: 80vw;
+    }
+
+    #greetings-text-box {
+        font-size: 0.75em;
+    }
+
+    #header-box {
+        padding: 15px 0px;
+    }
+
+    #header-box ul {
+        display: none;
+    }
+    
+    #header-box h1{
+        font-size: 2em;
+    }
+
+    #container {
+        background-size: fill;
+    }
+
+    .spacer {
+        height: 90px;
+    }
+
+    header {
+        width: 90vw;
+        padding: 0px 30px;
+        justify-content: center;
+    }
+
+    .heading {
+        font-size: 1.75em;
+    }
+
+    #objectives {
+        width: 100%;
+        padding: 30px;
+    }
+
+    #council-banner {
+        font-size: 1.75em;
+    }
+
+    #council {
+        width: 100%;
+    }
+
+    footer {
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #greetings-text-box {
+        height: 90vh;
+        width: 80vw;
+    }
 }
