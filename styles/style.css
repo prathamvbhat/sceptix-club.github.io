@@ -150,6 +150,10 @@ header {
     text-align: left;
 }
 
+#objectives a {
+    color: #fff;
+}
+
 .heading {
     color: white;
     font-size: 2.3em;
