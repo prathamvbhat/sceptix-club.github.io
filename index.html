@@ -5,10 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles/style.css" rel="stylesheet" type="text/css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <title>The sceptix club</title>
+    <link href="styles/greetings.css" rel="stylesheet" type="text/css">
+    <title>Loading...</title>
 </head>
 <body>
 
@@ -19,6 +17,8 @@
     </div>
 
     <div id="container" class="hidden">
+
+        <img src="/images/polygons.svg" id="polygons">
 
         <div id="header-box">
             <header class="blur">
@@ -81,12 +81,12 @@
                 <h2>Alriya Treeza Dsouza</h2>
                 <p>Secretary</p>
             </div>
-            <div class="card blur"  >
+            <div class="card blur">
                 <img src="/images/KRH.png" alt="Khushi Rhudaynath Haldankar">
                 <h2>Khushi Rhudaynath Haldankar</h2>
                 <p>Media Supervisor</p>
             </div>
-            <div class="card blur"  >
+            <div class="card blur">
                 <img src="/images/AGV.png" alt="Arshith Glanwin Vaz">
                 <h2>Arshith Glanwin Vaz</h2>
                 <p>Advisory Supervisor</p>
@@ -102,36 +102,7 @@
     </div>
 
     <script defer src="/scripts/greetings.js"></script>
+    <script defer src="/scripts/parallax.js"></script>
 
 </body>
 </html>
-
-<!--
-
-        let greeting = document.getElementById("greetings-box")
-
-        greeting.addEventListener("click", () => {
-            greeting.classList.toggle("invisible");
-        })
-    
-
-    window.addEventListener("scroll", () => {
-            
-            let scroll_value = window.scrollY;
-            document.getElementById("polygons").style.left = scroll_value * -0.2 + "px";
-
-        });
-
-     <img src="/images/polygons.svg" id="polygons" style="z-index: 1;" class="parallax">
-
-        <script>
-        setTimeout(() => {
-            document.getElementById("container").classList.remove("hidden");
-        }, 1000);
-    </script> 
-
-    <script defer src="scripts/vanilla-tilt.js"></script> 
-
-    
-
--->
