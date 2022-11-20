@@ -28,8 +28,8 @@
 
 body {
     font-family: 'Ubuntu Mono', monospace;
-    background: rgb(96,63,139);
-    background: linear-gradient(69deg, rgba(96,63,139,1) 0%, rgba(161,106,232,1) 43%, rgba(161,106,232,1) 56%, rgba(253,73,160,1) 100%);
+    background: rgb(3,4,94);
+    background: linear-gradient(69deg, rgba(3,4,94,1) 0%, rgba(0,150,199,1) 33%, rgba(72,202,228,1) 66%, rgba(202,240,248,1) 100%); 
     margin: 0 auto;
 }
 
@@ -46,7 +46,7 @@ body {
 
 #container {
     font-family: "Gandhi Sans", sans-serif;
-    background: url("/images/background.svg");
+    background: url("/images/background-blue.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -57,7 +57,6 @@ body {
     align-items: center;
     justify-content: center;
     overflow-x: hidden;
-    scroll-behavior: smooth;
 }
 
 #container.hidden {
@@ -66,14 +65,6 @@ body {
 
 #container p {
     font-size: 1.25em;
-}
-
-#polygons {
-    position: absolute;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
 }
 
 .spacer {
@@ -116,7 +107,7 @@ header {
     border-radius: 20px;
     margin-right: 20px;
     text-decoration: none;
-    color: #FD49A0;
+    color: #03045e;
     background: white;
     border-radius: 30px;
     transition: 0.2s;
@@ -124,7 +115,7 @@ header {
 
 #header-box a:hover {
     color: white;
-    background: #FD49A0;
+    background: #03045e;
 }
 
 #header-box h1{
@@ -230,13 +221,11 @@ footer a:hover {
     }
 
     #container {
-        background-size: fill;
-        background: rgb(96,63,139);
-        background: linear-gradient(69deg, rgba(96,63,139,1) 0%, rgba(161,106,232,1) 43%, rgba(161,106,232,1) 56%, rgba(253,73,160,1) 100%);
-    }
-
-    #polygons {
-        display: none;
+        background: url("/images/background-blue-tablet.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
     }
 
     .spacer {
@@ -268,5 +257,24 @@ footer a:hover {
 
     footer {
         width: 90vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #container {
+        background: rgb(0,119,182);
+        background: linear-gradient(69deg, rgba(0,119,182,1) 0%, rgba(144,224,239,1) 100%); 
+    }
+
+    .blur, #header-box h1 {
+        color: #000023;
+    }
+
+    .heading, #objectives, #objectives a, #council-banner {
+        color: #03045e;
+    }
+
+    footer a {
+        color: #000023;
     }
 }
